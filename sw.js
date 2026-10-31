@@ -1,6 +1,6 @@
 // Service worker: guarda os arquivos do app para funcionar offline.
 // Ao publicar uma nova versão do código, aumente o número em VERSION.
-const VERSION = 'cofre-v1.0.0';
+const VERSION = 'cofre-v1.0.1';
 const ASSETS = [
   './',
   './index.html',

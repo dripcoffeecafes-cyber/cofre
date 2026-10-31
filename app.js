@@ -1,7 +1,7 @@
 import { Vault } from './vault.js';
 import { generate, strength } from './gen.js';
 
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.0.1';
 const HIDDEN_LOCK_MS = 60 * 1000; // em segundo plano por mais de 1 min → bloqueia
 const CLIP_CLEAR_MS = 30 * 1000;
 
@@ -719,7 +719,7 @@ function openEditor(id, preset = {}) {
   const cat = state.cat.startsWith('__') ? '' : state.cat;
   const d = existing ? { ...existing } : {
     title: '', username: '', url: '', notes: '', favorite: state.cat === '__fav',
-    password: preset.password || generate(loadGenOpts()), category: cat,
+    password: preset.password || '', category: cat,
   };
 
   return modal((close) => {
